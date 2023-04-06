@@ -3,9 +3,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('wellcom') {
             steps {
-                echo 'Hello World'
+               checkout scm
+               sh 'python NewScreen/main.py'
+            }
+        }
+        stage('clicks') {
+            steps {
+               checkout scm
+               sh 'python NewButtons/main.py'
             }
         }
     }
