@@ -1,6 +1,6 @@
 properties([pipelineTriggers([pollSCM('* * * * *')])])
 pipeline {
-    agent any 
+    agent any
 
     stages {
         stage('wellcom') {
